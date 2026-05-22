@@ -1,0 +1,47 @@
+export type EstadoEntrevista =
+  | "borrador"
+  | "programada"
+  | "en_proceso"
+  | "finalizada"
+  | "cancelada";
+
+export type EstadoAsignacion = "asignada" | "inactiva" | "cancelada";
+
+export type Entrevista = {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  creada_por: number;
+  estado: EstadoEntrevista;
+  fecha_programada: string | null;
+  fecha_creacion: string;
+  fecha_actualizacion: string;
+};
+
+export type PruebaEntrevista = {
+  id: number;
+  entrevista: number;
+  prueba: number;
+  asignada_por: number;
+  estado: EstadoAsignacion;
+  observaciones: string;
+  fecha_asignacion: string;
+  fecha_actualizacion: string;
+};
+
+export type CreateEntrevistaDto = {
+  titulo: string;
+  descripcion: string;
+  creada_por: number;
+  estado?: EstadoEntrevista;
+  fecha_programada?: string | null;
+};
+
+export type UpdateEntrevistaDto = Partial<Omit<CreateEntrevistaDto, "creada_por">>;
+
+export type AsignarPruebaDto = {
+  entrevista: number;
+  prueba: number;
+  asignada_por: number;
+  observaciones?: string;
+};
