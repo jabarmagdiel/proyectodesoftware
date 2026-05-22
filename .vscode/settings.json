@@ -1,0 +1,19 @@
+{
+  "python.analysis.extraPaths": [
+    "./ai-service",
+    "./ai-service/venv/Lib/site-packages",
+    "./videoconferencia-backent",
+    "./videoconferencia-backent/venv/Lib/site-packages"
+  ],
+  "python.autoComplete.extraPaths": [
+    "./ai-service",
+    "./ai-service/venv/Lib/site-packages",
+    "./videoconferencia-backent",
+    "./videoconferencia-backent/venv/Lib/site-packages"
+  ],
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "executionEnvironments": [
+    {
+      "root": "ai-service",
+      "extraPaths": [
+        "./ai-service",
+        "./ai-service/venv/Lib/site-packages"
+      ]
+    },
+    {
+      "root": "videoconferencia-backent",
+      "extraPaths": [
+        "./videoconferencia-backent",
+        "./videoconferencia-backent/venv/Lib/site-packages"
+      ]
+    }
+  ],
+  "reportMissingModuleSource": "none"
+}
+
